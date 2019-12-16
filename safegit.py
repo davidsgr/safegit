@@ -61,7 +61,7 @@ def get_machine_name(args):
     if '--machine-name' in args[0]:
         tokens = args[0].split('=')
         if len(tokens) != 2:
-            raise RunTimeError('No valid machine name specified')
+            raise RuntimeError('No valid machine name specified')
         machine_name = tokens[1]
         args = args[1:]
     else:
