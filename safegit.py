@@ -71,7 +71,7 @@ def get_machine_name(args):
         
     # Check that we're not on a compute node
     if 'node' in machine_name:
-        raise RunTimeError('fatal: safegit is being run from a compute node. '
+        raise RuntimeError('fatal: safegit is being run from a compute node. '
                            'Machine name must be specified') 
     return machine_name, args
     
